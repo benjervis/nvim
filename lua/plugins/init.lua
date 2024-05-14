@@ -88,4 +88,19 @@ return {
       })
     end,
   },
+  {
+    "AndrewRadev/sideways.vim",
+    keys = {
+      {
+        "<leader>Sh",
+        "<cmd>SidewaysLeft<CR>",
+        desc = "Sideways left",
+      },
+      {
+        "<leader>Sl",
+        "<cmd>SidewaysRight<CR>",
+        desc = "Sideways right",
+      },
+    },
+  },
 }
