@@ -1,6 +1,41 @@
 return {
   "jeffkreeftmeijer/vim-numbertoggle",
   {
+    "AndrewRadev/sideways.vim",
+    keys = {
+      {
+        "<leader>Sh",
+        "<cmd>SidewaysLeft<CR>",
+        desc = "Sideways left",
+      },
+      {
+        "<leader>Sl",
+        "<cmd>SidewaysRight<CR>",
+        desc = "Sideways right",
+      },
+      {
+        "<leader>Si",
+        "<Plug>SidewaysArgumentInsertBefore",
+        desc = "Sideways insert argument before",
+      },
+      {
+        "<leader>Sa",
+        "<Plug>SidewaysArgumentAppendAfter",
+        desc = "Sideways append argument after",
+      },
+      {
+        "<leader>SI",
+        "<Plug>SidewaysArgumentInsertFirst",
+        desc = "Sideways insert argument first",
+      },
+      {
+        "<leader>SA",
+        "<Plug>SidewaysArgumentAppendLast",
+        desc = "Sideways append argument last",
+      },
+    },
+  },
+  {
     "nvim-telescope/telescope.nvim",
     keys = {
       -- disable the keymap to grep files
@@ -97,20 +132,4 @@ return {
       })
     end,
   },
-  {
-    "AndrewRadev/sideways.vim",
-    keys = {
-      {
-        "<leader>Sh",
-        "<cmd>SidewaysLeft<CR>",
-        desc = "Sideways left",
-      },
-      {
-        "<leader>Sl",
-        "<cmd>SidewaysRight<CR>",
-        desc = "Sideways right",
-      },
-    },
-  },
-  "mg979/vim-visual-multi",
 }
