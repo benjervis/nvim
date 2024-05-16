@@ -6,12 +6,21 @@ return {
       -- disable the keymap to grep files
       -- { "<leader>/", false },
       -- change a keymap
+      { "<leader>fr", LazyVim.telescope("oldfiles", { cwd = vim.uv.cwd() }), desc = "Recent (cwd)" },
+      { "<leader>fR", "<cmd>Telescope oldfiles<cr>", desc = "Recent (all)" },
       {
-        "<leader>fp",
+        "<leader>fj",
         function()
           require("telescope.builtin").find_files({ search_dirs = { "build-tools", "dev-tooling" } })
         end,
         desc = "Find Jira tools",
+      },
+      {
+        "<leader>fp",
+        function()
+          require("telescope.builtin").find_files({ search_file = "package.json" })
+        end,
+        desc = "Find packages",
       },
       -- add a keymap to browse plugin files
       -- {

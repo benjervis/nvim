@@ -16,9 +16,8 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.json" },
     { import = "lazyvim.plugins.extras.lang.rust" },
     { import = "lazyvim.plugins.extras.formatting.prettier" },
-    { import = "lazyvim.plugins.extras.util.gitui" },
     { import = "lazyvim.plugins.extras.editor.outline" },
-    -- { import = "lazyvim.plugins.extras.editor.refactoring" },
+    { import = "lazyvim.plugins.extras.editor.refactoring" },
     { import = "lazyvim.plugins.extras.ui.mini-animate" },
     -- import/override with your plugins
     { import = "plugins" },
@@ -51,4 +50,5 @@ require("lazy").setup({
   },
 })
 
+---@diagnostic disable-next-line: missing-fields
 require("lspconfig").flow.setup({})
