@@ -1,6 +1,11 @@
 return {
   "jeffkreeftmeijer/vim-numbertoggle",
   {
+    "olimorris/onedarkpro.nvim",
+    priority = 1000, -- Ensure it loads first
+  },
+  { "tpope/vim-surround", lazy = false },
+  {
     "AndrewRadev/sideways.vim",
     keys = {
       {
