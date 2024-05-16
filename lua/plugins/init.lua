@@ -1,6 +1,12 @@
 return {
   "jeffkreeftmeijer/vim-numbertoggle",
   {
+    "mg979/vim-visual-multi",
+    init = function()
+      vim.g.VM_highlight_matches = "hi! link Search PmenuSel"
+    end,
+  },
+  {
     "olimorris/onedarkpro.nvim",
     priority = 1000, -- Ensure it loads first
   },
