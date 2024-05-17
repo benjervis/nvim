@@ -118,4 +118,5 @@ return {
       vim.g.VM_theme = "ocean"
     end,
   },
+  "tpope/vim-surround",
 }
