@@ -22,6 +22,17 @@ return {
         end,
         desc = "Find packages",
       },
+      {
+        "<leader>fn",
+        function()
+          require("telescope.builtin").find_files({
+            no_ignore = true,
+            search_dirs = { "node_modules" },
+            search_file = "package.json",
+          })
+        end,
+        desc = "Find node_module",
+      },
       -- add a keymap to browse plugin files
       -- {
       --   "<leader>fp",
