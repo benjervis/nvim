@@ -137,4 +137,5 @@ return {
     end,
   },
   "tpope/vim-surround",
+  { "christoomey/vim-tmux-navigator", lazy = false },
 }
