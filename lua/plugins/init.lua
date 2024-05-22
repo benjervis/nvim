@@ -137,5 +137,20 @@ return {
     end,
   },
   "tpope/vim-surround",
-  { "christoomey/vim-tmux-navigator", lazy = false },
+  {
+    "christoomey/vim-tmux-navigator",
+    lazy = false,
+    keys = {
+      {
+        "<C-h>",
+        "<cmd>TmuxNavigateLeft<CR>",
+        desc = "Tmux navigate left",
+      },
+      {
+        "<C-l>",
+        "<cmd>TmuxNavigateRight<CR>",
+        desc = "Tmux navigate right",
+      },
+    },
+  },
 }
