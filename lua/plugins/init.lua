@@ -45,6 +45,13 @@ return {
   },
   {
     "nvim-neo-tree/neo-tree.nvim",
+    keys = {
+      {
+        "<leader>E",
+        "<cmd>Neotree %:p:h<CR>",
+        desc = "Open file explorer (current dir)",
+      },
+    },
     opts = {
       close_if_last_window = true,
       event_handlers = {
