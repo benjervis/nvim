@@ -12,7 +12,7 @@ return {
   {
     "mg979/vim-visual-multi",
     init = function()
-      vim.g.VM_highlight_matches = "hi! link Search PmenuSel"
+      vim.g.VM_theme = "ocean"
     end,
   },
   {
