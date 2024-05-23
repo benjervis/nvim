@@ -92,6 +92,13 @@ return {
         },
       },
     },
+    keys = {
+      {
+        "<leader>E",
+        "<cmd>Neotree %:p:h<CR>",
+        desc = "Open file explorer (current dir)",
+      },
+    },
   },
   -- Use <tab> for completion and snippets (supertab)
   -- first: disable default <tab> and <s-tab> behavior in LuaSnip
