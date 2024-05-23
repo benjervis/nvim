@@ -77,10 +77,36 @@ return {
         end,
         desc = "Find packages",
       },
+      {
+        "<leader>fn",
+        function()
+          require("telescope.builtin").find_files({
+            no_ignore = true,
+            search_dirs = { "node_modules" },
+            search_file = "package.json",
+          })
+        end,
+        desc = "Find node_module",
+      },
+      -- add a keymap to browse plugin files
+      -- {
+      --   "<leader>fp",
+      --   function()
+      --     require("telescope.builtin").find_files({ cwd = require("lazy.core.config").options.root })
+      --   end,
+      --   desc = "Find Plugin File",
+      -- },
     },
   },
   {
     "nvim-neo-tree/neo-tree.nvim",
+    keys = {
+      {
+        "<leader>E",
+        "<cmd>Neotree %:p:h<CR>",
+        desc = "Open file explorer (current dir)",
+      },
+    },
     opts = {
       close_if_last_window = true,
       event_handlers = {
@@ -150,5 +176,43 @@ return {
         end, { "i", "s" }),
       })
     end,
+  },
+  {
+    "AndrewRadev/sideways.vim",
+    keys = {
+      {
+        "<leader>Sh",
+        "<cmd>SidewaysLeft<CR>",
+        desc = "Sideways left",
+      },
+      {
+        "<leader>Sl",
+        "<cmd>SidewaysRight<CR>",
+        desc = "Sideways right",
+      },
+    },
+  },
+  {
+    "mg979/vim-visual-multi",
+    init = function()
+      vim.g.VM_theme = "ocean"
+    end,
+  },
+  "tpope/vim-surround",
+  {
+    "christoomey/vim-tmux-navigator",
+    lazy = false,
+    keys = {
+      {
+        "<C-h>",
+        "<cmd>TmuxNavigateLeft<CR>",
+        desc = "Tmux navigate left",
+      },
+      {
+        "<C-l>",
+        "<cmd>TmuxNavigateRight<CR>",
+        desc = "Tmux navigate right",
+      },
+    },
   },
 }
