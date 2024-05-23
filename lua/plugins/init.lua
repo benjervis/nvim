@@ -10,12 +10,6 @@ return {
   },
   "jeffkreeftmeijer/vim-numbertoggle",
   {
-    "mg979/vim-visual-multi",
-    init = function()
-      vim.g.VM_theme = "ocean"
-    end,
-  },
-  {
     "olimorris/onedarkpro.nvim",
     priority = 1000, -- Ensure it loads first
   },
@@ -178,27 +172,11 @@ return {
     end,
   },
   {
-    "AndrewRadev/sideways.vim",
-    keys = {
-      {
-        "<leader>Sh",
-        "<cmd>SidewaysLeft<CR>",
-        desc = "Sideways left",
-      },
-      {
-        "<leader>Sl",
-        "<cmd>SidewaysRight<CR>",
-        desc = "Sideways right",
-      },
-    },
-  },
-  {
     "mg979/vim-visual-multi",
     init = function()
       vim.g.VM_theme = "ocean"
     end,
   },
-  "tpope/vim-surround",
   {
     "christoomey/vim-tmux-navigator",
     lazy = false,
